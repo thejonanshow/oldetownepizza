@@ -3,3 +3,26 @@
     Override default refinery application CSS below.
     Formatting applies to all frontend.
 */
+
+html {
+  min-height:100;
+  background:#400 url(/images/bg.png);
+}
+#header{
+}   
+
+#content{
+  background:#560502;
+
+}
+
+footer{
+  height:200px;
+  width:100%;
+background: -webkit-radial-gradient(50% 0, ellipse farthest-corner,
+    			 rgba(0,0,0,.5), #000 75%);
+            no-repeat;
+    background: -moz-radial-gradient(50% 0, ellipse farthest-corner,
+        		 rgba(0,0,0,.5), #000 75%);
+            no-repeat;
+}
