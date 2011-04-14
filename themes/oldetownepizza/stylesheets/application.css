@@ -49,7 +49,7 @@ a img {border: 0;}
   width:200px;height:191px;
   margin:0 auto;
   text-indent:-9999px;
-  background:url(/images/logo.png);
+  background:#000 url(/images/logo.png);
   z-index:100;
 }
 
@@ -80,9 +80,20 @@ a img {border: 0;}
 
 /* LAYOUT */
 
+/* Middle */
+#page {
+  margin:20px 0;padding:20px;
+  background:#fff;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
+  border-radius:10px;
+}
+
 /* typography */
 html {font-size:100.01%;}
-body {font-size:75%;color:#fff;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:#000;}
+body {font-size:75%;color:#222;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:#000;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
 h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2em;margin-bottom:0.75em;}
