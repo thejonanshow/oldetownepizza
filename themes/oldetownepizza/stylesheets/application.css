@@ -84,6 +84,7 @@ a img {border: 0;}
 
 /* Middle */
 #page {
+  min-height:200px;
   margin:20px 0;padding:20px;
   background:#fff;
   -webkit-border-radius:10px;
