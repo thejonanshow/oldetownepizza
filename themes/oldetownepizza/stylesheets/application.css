@@ -49,7 +49,7 @@ a img {border: 0;}
   width:200px;height:191px;
   margin:0 auto;
   text-indent:-9999px;
-  background:#000 url(/images/logo.png);
+  background:url(/images/logo.png);
   z-index:100;
 }
 
@@ -96,7 +96,7 @@ a img {border: 0;}
 
 /* typography */
 html {font-size:100.01%;}
-body {font-size:75%;color:#222;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:#000;}
+body {font-size:75%;color:#222;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:#000 url(/images/bg.jpg) fixed;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
 h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2em;margin-bottom:0.75em;}
@@ -175,12 +175,7 @@ form.inline p {margin-bottom:0;}
 
 /* Footer */
 footer{
-  height:200px;
-  width:100%;
-  background: -webkit-radial-gradient(50% 0, ellipse farthest-corner,
-    rgba(0,0,0,.5), #000 75%);
-    no-repeat;
-  background: -moz-radial-gradient(50% 0, ellipse farthest-corner,
-    rgba(0,0,0,.5), #000 75%);
-    no-repeat;
+  padding:0 20px 20px;
+  font-size:14px;
+  color:#eee;
 }

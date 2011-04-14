@@ -10661,3 +10661,982 @@ Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15
 Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.7ms)
 Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (678.8ms)
 Completed 200 OK in 2652ms (Views: 684.1ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/menu" for 127.0.0.1 at 2011-04-13 20:10:57 -0600
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#show as HTML
+  Parameters: {"path"=>"menu", "locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.4ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT sluggable_id FROM slugs WHERE ((slugs.sluggable_type = 'Page' AND slugs.name = 'menu' AND slugs.sequence = 1))[0m
+  [1m[35mPage Load (0.7ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 7 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSlug Load (0.6ms)[0m  [1mSELECT "slugs".* FROM "slugs" WHERE ("slugs".sluggable_id = 7 AND "slugs".sluggable_type = 'Page') ORDER BY id DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mSeoMetum Load (0.3ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPagePart Load (0.4ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 7) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.6ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 10)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 11)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (211.9ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.7ms)
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (187.7ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (4.2ms)
+  [1m[35mPage Load (3.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (1.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.6ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (1.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.3ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (205.9ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (290.5ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (302.8ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.8ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.7ms)
+Rendered themes/oldetownepizza/views/pages/show.html.erb within layouts/application (808.1ms)
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed 200 OK in 2805ms (Views: 810.5ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-13 20:13:27 -0600
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPagePart Load (0.3ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 1) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.3ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 1)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 2)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (163.1ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.7ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (42.8ms)
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1
+  [1m[36mSeoMetum Load (0.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (101.9ms)
+  [1m[35mPage Load (3.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.4ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.1ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (0.9ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.7ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (1.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.4ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (101.3ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (185.2ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (197.2ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.8ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.7ms)
+Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (585.2ms)
+Completed 200 OK in 2423ms (Views: 590.2ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-13 20:23:13 -0600
+  [1m[36mSQL (1.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mPage Load (90.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPagePart Load (0.3ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 1) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.3ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 1)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 2)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (161.3ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.6ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (46.3ms)
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1
+  [1m[36mSeoMetum Load (0.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (108.2ms)
+  [1m[35mPage Load (3.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (1.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.6ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (1.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.5ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (101.3ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (185.2ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (197.6ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.8ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.7ms)
+Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (594.6ms)
+Completed 200 OK in 2439ms (Views: 599.2ms | ActiveRecord: 109.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-13 20:23:56 -0600
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPagePart Load (0.4ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 1) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.4ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 1)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 2)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (173.5ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.9ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (43.1ms)
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1
+  [1m[36mSeoMetum Load (0.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (102.6ms)
+  [1m[35mPage Load (3.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.1ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (0.9ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.6ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (1.1ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.4ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (101.5ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (184.1ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (196.0ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.8ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.7ms)
+Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (597.4ms)
+Completed 200 OK in 2526ms (Views: 601.9ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-13 20:26:00 -0600
+  [1m[36mSQL (4.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.1ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPagePart Load (0.4ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 1) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.3ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 1)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 2)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (164.2ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.6ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (42.2ms)
+  [1m[35mPage::Translation Load (0.4ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1
+  [1m[36mSeoMetum Load (0.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (102.8ms)
+  [1m[35mPage Load (3.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (0.9ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.6ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (1.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.4ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (101.4ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (185.0ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (197.4ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.8ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.7ms)
+Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (587.5ms)
+Completed 200 OK in 2463ms (Views: 593.5ms | ActiveRecord: 22.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-13 20:26:23 -0600
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.1ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPagePart Load (0.3ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 1) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.3ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 1)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 2)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (162.4ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (41.6ms)
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1
+  [1m[36mSeoMetum Load (0.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (123.2ms)
+  [1m[35mPage Load (4.0ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (0.9ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.7ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (1.1ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.3ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (193.3ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (283.0ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (297.2ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.8ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.8ms)
+Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (705.6ms)
+Completed 200 OK in 2592ms (Views: 709.6ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-13 20:26:50 -0600
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPagePart Load (0.3ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 1) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.3ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 1)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 2)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (172.7ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.6ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (55.3ms)
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1
+  [1m[36mSeoMetum Load (0.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (111.3ms)
+  [1m[35mPage Load (3.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (0.9ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.5ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (0.9ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.3ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (192.6ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (274.3ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (286.3ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.8ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.8ms)
+Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (708.5ms)
+Completed 200 OK in 2605ms (Views: 714.4ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-13 20:26:59 -0600
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPagePart Load (0.3ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 1) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.3ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 1)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 2)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (162.2ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (128.9ms)
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1
+  [1m[36mSeoMetum Load (0.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (20.8ms)
+  [1m[35mPage Load (3.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.4ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (11.6ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.7ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (1.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.6ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (206.2ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (348.6ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (360.5ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.9ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.8ms)
+Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (753.2ms)
+Completed 200 OK in 2750ms (Views: 746.6ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-13 20:27:04 -0600
+  [1m[36mSQL (1.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPagePart Load (0.4ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 1) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.3ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 1)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 2)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (177.2ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.7ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (124.9ms)
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (20.3ms)
+  [1m[35mPage Load (3.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (0.9ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.5ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (1.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.3ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (199.0ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (281.7ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (293.4ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.9ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.9ms)
+Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (699.5ms)
+Completed 200 OK in 2699ms (Views: 705.2ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-13 20:29:13 -0600
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by PagesController#home as HTML
+  Parameters: {"locale"=>:en}
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPage::Translation Load (1.1ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" = 'en'[0m
+  [1m[35mRole Load (0.2ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."title" = 'Refinery' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT * FROM "users" INNER JOIN "roles_users" ON "users".id = "roles_users".user_id WHERE ("roles_users".role_id = 1 )
+  [1m[36mPage Load (0.7ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."link_url" = '/' LIMIT 1[0m
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mPagePart Load (0.4ms)[0m  [1mSELECT "page_parts".* FROM "page_parts" WHERE ("page_parts".page_id = 1) ORDER BY position ASC[0m
+  [1m[35mPagePart::Translation Load (0.3ms)[0m  SELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 1)
+  [1m[36mPagePart::Translation Load (0.3ms)[0m  [1mSELECT "page_part_translations".* FROM "page_part_translations" WHERE "page_part_translations"."locale" IN ('en') AND ("page_part_translations".page_part_id = 2)[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_content_page.html.erb (164.2ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_html_tag.html.erb (0.6ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mRole Load (0.3ms)[0m  [1mSELECT * FROM "roles" INNER JOIN "roles_users" ON "roles".id = "roles_users".role_id WHERE ("roles_users".user_id = 1 )[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_site_bar.html.erb (124.7ms)
+  [1m[35mPage::Translation Load (0.3ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1
+  [1m[36mSeoMetum Load (0.3ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_head.html.erb (20.4ms)
+  [1m[35mPage Load (3.0ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."show_in_menu" = 't' AND "pages"."id" IN (1, 2, 3, 4, 4, 5, 6, 7) AND "pages"."draft" = 'f' ORDER BY lft ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 1 LIMIT 1
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7)
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 7) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 8 LIMIT 1
+  [1m[36mPage::Translation Load (0.2ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mSeoMetum Load (0.2ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3)
+  [1m[36mPage::Translation Load (0.3ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 3 LIMIT 1
+  [1m[36mPage::Translation Load (1.5ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mSeoMetum Load (0.9ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4)
+  [1m[36mPage::Translation Load (0.6ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE "page_translations"."locale" IN ('en') AND ("page_translations".page_id = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "seo_meta".* FROM "seo_meta" WHERE "seo_meta"."seo_meta_type" = 'Page::Translation' AND "seo_meta"."seo_meta_id" = 4 LIMIT 1
+  [1m[36mPage::Translation Load (0.9ms)[0m  [1mSELECT "page_translations".* FROM "page_translations" WHERE ("page_translations".page_id IN (1,7,3,4))[0m
+  [1m[35mSlug Load (1.3ms)[0m  SELECT "slugs".* FROM "slugs" WHERE ("slugs"."sluggable_id" IN (1,7,3,4) and "slugs"."sluggable_type" = 'Page') ORDER BY id DESC
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu_branch.html.erb (193.3ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_menu.html.erb (273.7ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_header.html.erb (285.6ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_footer.html.erb (0.8ms)
+Rendered /Users/macuser/.rvm/gems/ruby-1.9.2-p180/gems/refinerycms-core-0.9.9.15/app/views/shared/_javascripts.html.erb (0.8ms)
+Rendered themes/oldetownepizza/views/pages/home.html.erb within layouts/application (675.9ms)
+Completed 200 OK in 2573ms (Views: 680.8ms | ActiveRecord: 19.1ms)
