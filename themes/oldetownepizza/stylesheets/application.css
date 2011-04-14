@@ -39,6 +39,7 @@ a img {border: 0;}
 html {}
 #header{}
 #page_container {
+  position:relative;
   width:960px;
   margin:20px auto;
 }
@@ -46,10 +47,29 @@ html {}
 /* Logo */
 #logo {
   width:200px;height:191px;
+  margin:0 auto;
   text-indent:-9999px;
   background:url(/images/logo.png);
 }
 
+/* Navigation */
+#menu {
+  position:absolute;
+  top:70px;left:0;
+  width:100%;height:44px;
+  border:1px solid #000;
+  border:1px 0;
+}
+#menu li {
+  float:left;
+  list-style:none;
+  width:120px;height:44px;line-height:44px;
+  text-align:center;
+  padding:0 20px;
+}
+#menu #item_2 {margin-left:260px;}
+
+/* Footer */
 footer{
   height:200px;
   width:100%;
