@@ -175,7 +175,26 @@ form.inline p {margin-bottom:0;}
 
 /* Middle */
 section {color:#222;}
-sectio h1 {}
+@font-face {
+  font-family: 'Swanky and Moo Moo';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Swanky and Moo Moo'), local('SwankyandMooMoo'), url('http://themes.googleusercontent.com/font?kit=orVNZ9kDeE3lWp3U3YELu9DBM1lOB_0MWtzhbhPR_Xs') format('woff');
+}
+section h1 {
+  margin:-20px -20px 20px -20px;
+  padding:0 40px 10px;
+  font-family:'Swanky and Moo Moo';
+  font-size:6em;
+  color:#400;
+  color:#fcc;
+  text-shadow:0 0 20px #f00;
+  background:#000;
+  -webkit-border-radius:8px 8px 0 0;
+  -moz-border-radius:8px 8px 0 0;
+  -o-border-radius:8px 8px 0 0;
+  border-radius:8px 8px 0 0; 
+}
 
 /* Footer */
 footer{
