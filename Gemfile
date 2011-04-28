@@ -59,6 +59,6 @@ gem 'refinerycms-page-images',  '~> 1.0'
 gem 'refinerycms-i18n',         '~> 0.9.9.16'
 
 gem 'heroku'
-gem 'taps'
+gem 'taps', '~> 0.3.22'
 
 # END USER DEFINED
