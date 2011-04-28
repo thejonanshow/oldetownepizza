@@ -174,7 +174,7 @@ form.inline p {margin-bottom:0;}
 .info a {color:#205791;}
 
 /* Middle */
-#page {color:#222;padding:40px;font-size:14px;line-height:1.5em;}
+#page {color:#222;padding:40px;font-size:14px;line-height:1.5em;background:#f4e9e0;}
 @font-face {
   font-family: 'Swanky and Moo Moo';
   font-style: normal;
@@ -194,6 +194,10 @@ section h1 {
   -o-border-radius:8px 8px 0 0;
   border-radius:8px 8px 0 0; 
 }
+section h2 {font-weight:100;font-size:3em;margin:.6em 0 .3em;}
+section h2,
+section h3 {color:#350b02;}
+section strong {color:#5b1406;}
 
 #page ul {
   width:25%;float:left;
