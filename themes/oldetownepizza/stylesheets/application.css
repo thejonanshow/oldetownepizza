@@ -96,7 +96,7 @@ a img {border: 0;}
 
 /* typography */
 html {font-size:100.01%;}
-body {font-size:75%;color:#222;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:#000 url(/images/bg.jpg) fixed;}
+body {font-size:75%;line-height:1.5em;color:#222;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:#000 url(/images/bg.jpg) fixed;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
 h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2em;margin-bottom:0.75em;}
@@ -172,6 +172,10 @@ form.inline p {margin-bottom:0;}
 .notice a {color:#514721;}
 .success a {color:#264409;}
 .info a {color:#205791;}
+
+/* Middle */
+section {color:#222;}
+sectio h1 {}
 
 /* Footer */
 footer{
