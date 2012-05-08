@@ -96,7 +96,7 @@ a img {border: 0;}
 
 /* typography */
 html {font-size:100.01%;}
-body {font-size:75%;color:#222;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:#000 url(/images/bg.jpg) fixed;}
+body {font-size:75%;line-height:1.5em;color:#222;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:#000 url(/images/bg.jpg) fixed;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
 h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:2em;margin-bottom:0.75em;}
@@ -173,9 +173,50 @@ form.inline p {margin-bottom:0;}
 .success a {color:#264409;}
 .info a {color:#205791;}
 
+/* Middle */
+#page {color:#222;padding:40px;font-size:14px;line-height:1.5em;background:#f4e9e0;}
+@font-face {
+  font-family: 'Swanky and Moo Moo';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Swanky and Moo Moo'), local('SwankyandMooMoo'), url('http://themes.googleusercontent.com/font?kit=orVNZ9kDeE3lWp3U3YELu9DBM1lOB_0MWtzhbhPR_Xs') format('woff');
+}
+section h1 {
+  margin:-40px -40px 20px -40px;
+  padding:0 40px 10px;
+  font-family:'Swanky and Moo Moo';
+  font-size:6em;
+  color:#cfc;
+  text-shadow:0 0 20px #0f0;
+  background:#000;
+  -webkit-border-radius:8px 8px 0 0;
+  -moz-border-radius:8px 8px 0 0;
+  -o-border-radius:8px 8px 0 0;
+  border-radius:8px 8px 0 0; 
+}
+section h2 {font-weight:100;font-size:3em;margin:.6em 0 .3em;}
+section h2,
+section h3 {color:#350b02;}
+section strong {color:#5b1406;}
+
+#page ul {
+  width:25%;float:left;
+}
+#page ul + br {clear:both;}
+
 /* Footer */
 footer{
   padding:0 20px 20px;
   font-size:14px;
   color:#eee;
+}
+
+/* ######################################### */
+/* #-----------PAGES-----------------------# */
+/* ######################################### */
+
+/* #-----------MENU------------------------# */
+
+#ot-menu{
+  
 }
