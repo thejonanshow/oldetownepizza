@@ -2,7 +2,7 @@
 <%= render :partial => "/shared/html_tag" %>
   <% site_bar = render(:partial => "/shared/site_bar", :locals => {:head => true}) -%>
   <%= render :partial => "/shared/head", :locals => {:theme => true} %>
-  <%= stylesheet_link_tag "colorbox" %>
+  <%= raw stylesheet_link_tag "colorbox" %>
   <% content_for :javascripts do %>
     <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" %>
     <%= javascript_include_tag "jquery.colorbox-min" %>
