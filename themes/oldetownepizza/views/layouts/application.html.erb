@@ -4,9 +4,9 @@
   <%= render :partial => "/shared/head", :locals => {:theme => true} %>
   <%= raw stylesheet_link_tag "colorbox" %>
   <% content_for :javascripts do %>
-    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" %>
-    <%= javascript_include_tag "jquery.colorbox-min" %>
-    <%= javascript_include_tag('application', :theme => true) %>
+    <%= raw javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" %>
+    <%= raw javascript_include_tag "jquery.colorbox-min" %>
+    <%= raw javascript_include_tag('application', :theme => true) %>
   <% end %>
 
 
