@@ -1,6 +1,6 @@
 <% if refinery_user? %>
   <% unless admin? # all required JS included by backend. %>
-    <% raw content_for :stylesheets, stylesheet_link_tag('refinery/site_bar') unless !!local_assigns[:exclude_css] %>
+    <% raw content_for :stylesheets, raw stylesheet_link_tag('refinery/site_bar') unless !!local_assigns[:exclude_css] %>
     <%= raw yield(:stylesheets) unless local_assigns[:head] or local_assigns[:exclude_css] %>
   <% end -%>
   <div id='site_bar'>
@@ -8,7 +8,7 @@
       <div id='editor_switch'>
         <%= raw site_bar_switch_link -%>
       </div>
-      <%= raw link_to image_tag("#{"http://refinerycms.com/images/" unless local_request?}refinery/logo-site-bar.png", :alt => "Refinery (tm) Content Manager"),
+      <%= raw link_to raw(image_tag("#{"http://refinerycms.com/images/" unless local_request?}refinery/logo-site-bar.png", :alt => "Refinery (tm) Content Manager")),
                   'http://refinerycms.com',
                   :target => '_blank',
                   :id => 'site_bar_refinery_cms_logo' %>
