@@ -8,3 +8,19 @@
 #   inflect.irregular 'person', 'people'
 #   inflect.uncountable %w( fish sheep )
 # end
+module CustomHtmlSafe
+  def html_safe?
+    true
+  end
+end
+
+class ActionView::OutputBuffer
+  include CustomHtmlSafe
+end
+class ActionView::SafeBuffer
+  include CustomHtmlSafe
+end
+class String
+  include CustomHtmlSafe
+end
+
