@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0.7'
+gem 'rails', '~> 3.0.5'
 gem 'sqlite3'
 gem 'bcrypt-ruby'
 gem 'aws-s3', :require => 'aws/s3'
@@ -8,7 +8,7 @@ gem 'aws-s3', :require => 'aws/s3'
 # REFINERY CMS ================================================================
 # Anything you put in here will be overridden when the app gets updated.
 
-gem 'refinerycms',              '= 0.9.9.14'
+gem 'refinerycms',              '= 0.9.9.15'
 
 group :development, :test do
   # To use refinerycms-testing, uncomment it (if it's commented out) and run 'bundle install'
@@ -25,7 +25,7 @@ end
 gem 'refinerycms-inquiries',    '~> 0.9'
 # gem 'refinerycms-news',         '~> 1.0'
 # gem 'refinerycms-portfolio',    '~> 0.9.9'
-gem 'refinerycms-theming',      '~> 1.0'
+gem 'refinerycms-theming',      '~> 1.0.1'
 # gem 'refinerycms-search',       '~> 0.9.8'
 # gem 'refinerycms-blog',         '~> 1.3'
 gem 'refinerycms-page-images',  '~> 1.0'
