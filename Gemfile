@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
-#gem 'rails', '~> 3.0.6'
-gem 'rails', '~> 3.2.8'
+gem 'rails', '~> 3.0.7'
 gem 'sqlite3'
 gem 'bcrypt-ruby'
 gem 'aws-s3', :require => 'aws/s3'
