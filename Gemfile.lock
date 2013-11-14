@@ -97,8 +97,6 @@ GEM
       activesupport (= 3.0.20)
       bundler (~> 1.0)
       railties (= 3.0.20)
-    rails-i18n (0.7.4)
-      i18n (~> 0.5)
     railties (3.0.20)
       actionpack (= 3.0.20)
       activesupport (= 3.0.20)
@@ -138,9 +136,6 @@ GEM
     refinerycms-dashboard (1.0.11)
       refinerycms-core (= 1.0.11)
     refinerycms-generators (1.0.4)
-    refinerycms-i18n (2.1.0)
-      rails-i18n (~> 0.7.3)
-      routing-filter (~> 0.3.0)
     refinerycms-images (1.0.11)
       activerecord (~> 3.0.10)
       dragonfly (~> 0.9.0)
@@ -169,8 +164,6 @@ GEM
       refinerycms-core (>= 0.9.9.15)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    routing-filter (0.3.1)
-      actionpack
     rubyzip (1.1.0)
     seo_meta (1.4.0)
       railties (>= 3.0.0)
@@ -203,7 +196,6 @@ DEPENDENCIES
   heroku
   rails (~> 3.0.5)
   refinerycms
-  refinerycms-i18n
   refinerycms-inquiries
   refinerycms-page-images
   refinerycms-theming

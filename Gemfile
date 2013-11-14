@@ -30,9 +30,6 @@ gem 'refinerycms-theming'
 # gem 'refinerycms-blog',         '~> 1.3'
 gem 'refinerycms-page-images'
 
-# Add i18n support (optional, you can remove this if you really want to).
-gem 'refinerycms-i18n'
-
 gem 'heroku'
 gem 'taps', '~> 0.3.22'
 
