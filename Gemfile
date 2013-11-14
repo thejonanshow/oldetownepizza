@@ -8,7 +8,7 @@ gem 'aws-s3', :require => 'aws/s3'
 # REFINERY CMS ================================================================
 # Anything you put in here will be overridden when the app gets updated.
 
-gem 'refinerycms',              '= 0.9.9.14'
+gem 'refinerycms'
 
 group :development, :test do
   # To use refinerycms-testing, uncomment it (if it's commented out) and run 'bundle install'
@@ -22,16 +22,16 @@ end
 
 
 # Specify additional Refinery CMS Engines here (all optional):
-gem 'refinerycms-inquiries',    '~> 0.9'
+gem 'refinerycms-inquiries'
 # gem 'refinerycms-news',         '~> 1.0'
 # gem 'refinerycms-portfolio',    '~> 0.9.9'
-gem 'refinerycms-theming',      '~> 1.0'
+gem 'refinerycms-theming'
 # gem 'refinerycms-search',       '~> 0.9.8'
 # gem 'refinerycms-blog',         '~> 1.3'
-gem 'refinerycms-page-images',  '~> 1.0'
+gem 'refinerycms-page-images'
 
 # Add i18n support (optional, you can remove this if you really want to).
-gem 'refinerycms-i18n',         '~> 0.9.9.16'
+gem 'refinerycms-i18n'
 
 gem 'heroku'
 gem 'taps', '~> 0.3.22'
