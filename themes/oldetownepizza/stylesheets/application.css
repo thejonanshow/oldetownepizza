@@ -80,6 +80,8 @@ a img {border: 0;}
 #menu a:active {color:#f66;}
 #menu #item_2 {margin-left:260px;}
 
+#menu li.last {display: none;}
+
 /* LAYOUT */
 
 /* Middle */
